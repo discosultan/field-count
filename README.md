@@ -11,7 +11,7 @@ Derive the field count of a struct.
 field_count = "0.1"
 ```
 
-```rs
+```rust
 // main.rs
 
 use field_count::FieldCount;
