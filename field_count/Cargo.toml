@@ -1,0 +1,12 @@
+[package]
+name = "field_count"
+version = "0.1.0"
+authors = ["discosultan <jaanusvarus@gmail.com>"]
+edition = "2018"
+license-file = "../LICENSE"
+description = "Derive the field count of a struct"
+repository = "https://github.com/discosultan/field_count"
+readme = "../README.md"
+
+[dependencies]
+field_count_derive = { version = "0.1", path = "../field_count_derive" }
