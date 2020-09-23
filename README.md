@@ -1,6 +1,6 @@
 # field_count
 
-Derive the field count for a struct.
+Derive the field count for a struct. Implements a `FieldCount` trait. Supports generic structs.
 
 ## 📦 Getting Started
 
