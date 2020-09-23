@@ -1,6 +1,6 @@
 # field_count
 
-Derive the field count of a struct.
+Derive the field count for a struct.
 
 ## 📦 Getting Started
 

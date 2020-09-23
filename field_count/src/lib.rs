@@ -27,6 +27,25 @@ pub use field_count_derive::*;
 mod tests {
     use super::FieldCount;
 
+    #[test]
+    fn test_derive_field_count_for_struct() {
+        assert_eq!(MyStruct::field_count(), 3);
+    }
+
+    #[test]
+    fn test_derive_field_count_for_generic_struct() {
+        assert_eq!(MyGenericStruct::<u32>::field_count(), 1);
+    }
+
+    #[test]
+    fn test_derive_field_count_as_trait() {
+        assert_eq!(field_count::<MyStruct>(), 3);
+    }
+
+    fn field_count<T: FieldCount>() -> usize {
+        T::field_count()
+    }
+
     #[derive(FieldCount)]
     struct MyStruct {
         _first_field: i32,
@@ -34,8 +53,8 @@ mod tests {
         _third_field: u16,
     }
 
-    #[test]
-    fn test_derive_field_count() {
-        assert_eq!(MyStruct::field_count(), 3);
+    #[derive(FieldCount)]
+    struct MyGenericStruct<T> {
+        _generic_field: T,
     }
 }
