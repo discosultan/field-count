@@ -1,6 +1,6 @@
 [package]
 name = "field_count"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["discosultan <jaanusvarus@gmail.com>"]
 edition = "2018"
 license-file = "../LICENSE"
@@ -9,4 +9,4 @@ repository = "https://github.com/discosultan/field-count"
 readme = "../README.md"
 
 [dependencies]
-field_count_derive = { version = "0.1", path = "../field_count_derive" }
+field_count_derive = { version = "0.1.1", path = "../field_count_derive" }
